@@ -1,0 +1,25 @@
+<div class="guia1">
+  <div class="content-guia1">
+    <h1>BIENVENIDO, AQUÍ LOS ESTUDIANTES PUEDEN SUBIR SUS GUÍAS DE LABORATORIO</h1>
+
+    <form action="/enviar" method="POST" enctype="multipart/form-data">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required><br>
+
+  <label for="carrera">Carrera:</label>
+  <input type="text" id="carrera" name="carrera" required><br>
+
+  <label for="asignatura">Asignatura:</label>
+  <input type="text" id="asignatura" name="asignatura" required><br>
+
+  <label for="grupo">Grupo:</label>
+  <input type="text" id="grupo" name="grupo" required><br>
+
+  <label for="guia">Guía de Laboratorio:</label>
+  <input type="file" id="guia" name="guia" accept=".pdf" required><br>
+
+  <input type="submit" value="Subir Guía">
+</form>
+
+  </div>
+</div>

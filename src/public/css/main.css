@@ -1,0 +1,163 @@
+body {
+  background: #9ecc7b;
+  background: -webkit-linear-gradient(to right, #9ecc7b, #058c42);
+  background: linear-gradient(to right, #9ecc7b, #058c42);
+}
+
+.logo {
+  width: 50%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.content-paragraph {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Estilos de adaptación automática */
+@media screen and (max-width: 600px) {
+  .content-wrapper {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .content-paragraph {
+    font-size: 14px;
+  }
+}
+
+/* guia1 */
+.guia1 {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.content-guia1 {
+  margin-top: 20px;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #666;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#grafico {
+  height: 300px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td {
+  background-color: #fff;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+h2 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+
