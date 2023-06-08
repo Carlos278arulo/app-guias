@@ -1,62 +1,70 @@
 <div class="guia1">
   <div class="content-guia1">
     <h1>Sistema de Gestión de Asignaturas</h1>
-    
+
     <h2>Subir Archivo</h2>
-    <form action="/subir" method="POST" enctype="multipart/form-data">
+    <form id="form1" action="/subir" method="POST" enctype="multipart/form-data">
       <input type="file" name="archivo" required>
-      <button type="submit">Subir</button>
     </form>
-    
+
     <h2>Agregar Nueva Guía</h2>
-    <form action="/guias/add" method="POST">
+    <form id="form2" action="/guias/add" method="POST">
       <label for="carrera">Carrera:</label>
       <input type="text" id="carrera" name="carrera" required>
-      
+
       <label for="asignatura">Asignatura:</label>
       <input type="text" id="asignatura" name="asignatura" required>
-      
+
       <label for="grupo">Grupo:</label>
       <input type="text" id="grupo" name="grupo" required>
-      
+
       <label for="num_estudiantes">Número de Estudiantes:</label>
       <input type="number" id="num_estudiantes" name="num_estudiantes" required>
-      
-      <button type="submit">Guardar</button>
     </form>
+
+    <button type="button" onclick="submitForms()">Enviar</button>
 
     <h2>Listado de Guías</h2>
     <form method="GET" action="/guias/view">
-    <button type="submit">Realizar Consulta</button>
- 
-    <table>
-    <thead>
-      <tr>
-        <th>Carrera</th>
-        <th>Asignatura</th>
-        <th>Grupo</th>
-        <th>Número de Estudiantes</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each guias}}
-      <tr>
-        <td>{{this.carrera}}</td>
-        <td>{{this.asignatura}}</td>
-        <td>{{this.grupo}}</td>
-        <td>{{this.num_estudiantes}}</td>
-        <td>
-          <form method="POST" action="/guias/{{this._id}}?_method=DELETE">
-            <button type="submit">Eliminar</button>
-          </form>
-        </td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
+      <button type="submit">Realizar Consulta</button>
+    </form>
 
-  
-  
+    <table>
+      <thead>
+        <tr>
+          <th>Carrera</th>
+          <th>Asignatura</th>
+          <th>Grupo</th>
+          <th>Número de Estudiantes</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each guias}}
+        <tr>
+          <td>{{this.carrera}}</td>
+          <td>{{this.asignatura}}</td>
+          <td>{{this.grupo}}</td>
+          <td>{{this.num_estudiantes}}</td>
+          <td>
+            <form method="POST" action="/guias/{{this._id}}?_method=DELETE">
+              <button type="submit">Eliminar</button>
+            </form>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
   </div>
 </div>
+
+<script>
+  function submitForms() {
+    var form1 = document.getElementById("form1");
+    var form2 = document.getElementById("form2");
+
+    form1.submit(); // Enviar el formulario 1
+    form2.submit(); // Enviar el formulario 2
+  }
+</script>
